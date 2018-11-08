@@ -1,0 +1,10 @@
+dn: olcDatabase={1}bdb,cn=config
+changetype: modify
+delete: olcAccess
+-
+add: olcAccess
+olcAccess: to * by dn.exact="cn=Anna Pou,ou=usuaris,dc=edt,dc=org" write
+olcaccess: to attrs=homePhone by self write
+olcaccess: to attrs=mail by self write
+olcaccess: to * by * read
+

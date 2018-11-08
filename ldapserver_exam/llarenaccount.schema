@@ -1,0 +1,27 @@
+# schema llarena:
+#            str,numric,boolean
+# @edt ASIX-M06 2018-2019
+# casB Objecte structural standalona (derivat de TOP)
+#
+attributetype (1.1.2.1.11 NAME 'delictes'
+  DESC 'TRUE or false'
+  SYNTAX  1.3.6.1.4.1.1466.115.121.1.25{64}
+  SINGLE-VALUE)
+
+attributetype (1.1.2.1.12 NAME 'anyscomdemna'
+  DESC 'TRUE or false'
+  SYNTAX  1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE)
+
+
+attributetype (1.1.2.1.13 NAME 'galeres'
+  SYNTAX  1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE)
+
+
+objectclass (1.1.2.2.2 NAME 'llarenaaccount'
+  DESC 'sosic need '
+  SUP TOP
+  AUXILIARY  
+  MAY ( delictes $ galeres $ anyscomdemna ) )
+

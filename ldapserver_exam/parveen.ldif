@@ -1,0 +1,47 @@
+dn: dc=parveen,dc=cat
+dc: parveen
+description: new data
+objectClass: dcObject
+objectClass: organization
+o: parveen.cat
+
+dn: ou=socis,dc=parveen,dc=cat
+ou: socis
+description: Container per a socis
+objectclass: organizationalunit
+
+dn: ou=simpatitzants,dc=parveen,dc=cat
+ou: simpatitzants
+description: next one
+objectclass: organizationalunit
+
+dn: idcat=100,ou=socis,dc=parveen,dc=cat
+objectclass: indepeOrgPerson
+cn: pera
+sn: ok
+idcat: 100
+sardanes: true
+foto: ///opt/docker/myphoto.jpg
+lema: hello world
+twitter: www.lokinki.com
+
+dn: idcat=200,ou=socis,dc=parveen,dc=cat
+objectclass: indepeOrgPerson
+cn: pera
+sn: ok
+idcat: 200
+sardanes: true
+foto: ///opt/docker/myphoto.jpg
+lema: hello world
+twitter: www.lokinki.com
+
+dn: idcat=300,ou=socis,dc=parveen,dc=cat
+objectclass: indepeOrgPerson
+cn: pera
+sn: ok
+idcat: 300
+sardanes: true
+foto: ///opt/docker/myphoto.jpg
+lema: hello world
+twitter: www.lokinki.com
+

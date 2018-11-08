@@ -1,0 +1,40 @@
+# schema indepeOrgPerson:
+#            numeric,boolean,foto,str,web
+# @edt ASIX-M06 2018-2019
+# casB Objecte structural standalona (derivat de TOP)
+#
+
+
+attributetype (1.1.2.1.6 NAME 'idcat'
+  EQUALITY integerMatch
+  SYNTAX  1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE)
+
+attributetype (1.1.2.1.5 NAME 'sardanes'
+  DESC 'TRUE or false'
+  SYNTAX  1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE)
+
+attributetype (1.1.2.1.4 NAME 'foto'
+  DESC 'foto del socis'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.40)
+
+attributetype (1.1.2.1.2 NAME 'lema'
+  SYNTAX  1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE)
+
+
+attributetype (1.1.2.1.3 NAME 'twitter'
+  DESC 'web del page'
+  EQUALITY caseExactMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15)
+
+
+
+objectclass (1.1.2.2.1 NAME 'indepeOrgPerson'
+  DESC 'sosic need indepeOrgPerson'
+  SUP inetOrgPerson
+  STRUCTURAL
+  MUST  idcat 
+  MAY ( sardanes $ foto $ lema $ twitter ) )
+
